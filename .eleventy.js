@@ -14,7 +14,7 @@ module.exports = function (eleventyConfig) {
     // Default site theme's
     eleventyConfig.addGlobalData("default_logo_img", "formation-sup-logo-small.svg");
     eleventyConfig.addGlobalData("default_logo_width", "30"); // In %
-    eleventyConfig.addGlobalData("default_baseline", "Formation Sup'");
+    eleventyConfig.addGlobalData("default_baseline", "Formations diplomantes, de chez vous, <strong>finançables jusqu'à 100%</strong>");
 
     // TRACKING
     // Balise GA4 + Google Ads

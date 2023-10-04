@@ -122,6 +122,7 @@ body {
   text-decoration: none;
   box-shadow: 2px 2px 5px rgb(128, 128, 128);
   border-radius: 20px;
+  cursor: pointer;
 }
 
 .cta-container-btn-quote {

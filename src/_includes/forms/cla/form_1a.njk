@@ -56,11 +56,12 @@
         color: var(--normal-color);
         font-weight: bold;
         font-size: 1.2em;
+        cursor: pointer;
     }
 </style>
 <div class="align-center">
     <form id="form-catalog" class="form-client">
-        <select name="course-type" id="course-type" required>
+        <select name="thematique" id="thematique" required>
             <option value="" selected="selected">Choix de la formation</option>
             <option value="Comptabilité">Comptabilité</option>
             <option value="Commerce international">Commerce international</option>
@@ -96,9 +97,9 @@
             <option value="Relation client">Relation client</option>
             <option value="Sport Business">Sport business</option>
         </select>
-        <input type="text" class="input-text" name="forname" id="forname" placeholder="Prénom" required />
-        <input type="text" class="input-text" name="lastname" id="lastname" placeholder="Nom" required />
-        <input type="tel" name="phone" id="phone" placeholder="Téléphone" required />
+        <input type="text" class="input-text" name="prenom" id="prenom" placeholder="Prénom" required />
+        <input type="text" class="input-text" name="nom" id="nom" placeholder="Nom" required />
+        <input type="tel" name="telephone" id="telephone" placeholder="Téléphone" required />
         <input type="email" name="email" id="email" placeholder="E-mail" required />
         <div class="form-brochure">
             <div>
@@ -114,11 +115,49 @@
         </div>
 
         <div class="form-conscent-container">
-            <input type="checkbox" name="conscent" id="conscent" class="conscent-checkbox" required /><label class="form-checkbox-label" for="conscent">J'accepte de recevoir des contenus promotionnels de la part de Formation Sup', pour son compte et pour ses partenaires.</label>
+            <input type="checkbox" name="consentement" id="consentement" class="conscent-checkbox" required /><label class="form-checkbox-label" for="consentement">J'accepte de recevoir des contenus promotionnels de la part de Formation Sup', pour son compte et pour ses partenaires.</label>
         </div>
 
         <div class="cta-container-btn-quote">
             <button type="submit" class="form-client-btn-submit">VALIDER</button>
         </div>
+        <input type="hidden" id="campagne" name="campagne" value="Studi_2023" />
+        <input type="hidden" id="source" name="source" value="133" />
+        <input type="hidden" id="formulaire" name="formulaire" value="https://formation-sup.com{{ page.url }}#form" />
+        <input type="hidden" id="url" name="url" value="https://formation-sup.com{{ page.url }}" />
+        <input type="hidden" id="utm_source" name="utm_source" value="google" />
+        <input type="hidden" id="utm_medium" name="utm_medium" value="SEA" />
+        <input type="hidden" id="pays" name="pays" value="FR" />
     </form>
 </div>
+
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() {
+        const form = document.getElementById("form-catalog");
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(form);
+            const data = {};
+
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+            fetch("https://leadflow.cardata.fr/api", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log("Success:", data);
+                    //window.location.href = "/lead-ok.html";
+                })
+                .catch((error) => {
+                    console.error("Error:", error);
+                });
+        });
+    });
+</script>
