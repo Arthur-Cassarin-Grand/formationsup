@@ -57,10 +57,6 @@
 </style>
 <div class="align-center">
     <form id="form-catalog" class="form-client">
-        <input type="text" class="input-text" name="forname" id="forname" placeholder="Prénom" required />
-        <input type="text" class="input-text" name="lastname" id="lastname" placeholder="Nom" required />
-        <input type="tel" name="phone" id="phone" placeholder="Téléphone" required />
-        <input type="email" name="email" id="email" placeholder="E-mail" required />
         <select name="course-type" id="course-type" required>
             <option value="" selected="selected">Choix de la formation</option>
             <option value="Comptabilité">Comptabilité</option>
@@ -97,7 +93,10 @@
             <option value="Relation client">Relation client</option>
             <option value="Sport Business">Sport business</option>
         </select>
-
+        <input type="text" class="input-text" name="forname" id="forname" placeholder="Prénom" required />
+        <input type="text" class="input-text" name="lastname" id="lastname" placeholder="Nom" required />
+        <input type="tel" name="phone" id="phone" placeholder="Téléphone" required />
+        <input type="email" name="email" id="email" placeholder="E-mail" required />
         <div class="form-brochure">
             <label>Obtenir la brochure</label>
             <input type="radio" id="brochure" name="brochure" value="true" checked>
