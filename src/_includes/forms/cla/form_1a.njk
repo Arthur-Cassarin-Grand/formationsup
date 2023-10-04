@@ -29,6 +29,8 @@
     }
 
     .form-brochure {
+        display: grid;
+        grid-template-columns: 1fr;
         text-align: justify;
         margin-top: 1rem;
         margin-bottom: 1rem;
@@ -98,12 +100,16 @@
         <input type="tel" name="phone" id="phone" placeholder="Téléphone" required />
         <input type="email" name="email" id="email" placeholder="E-mail" required />
         <div class="form-brochure">
-            <label>Obtenir la brochure</label>
-            <input type="radio" id="brochure" name="brochure" value="true" checked>
-            <label for="brochure">Oui</label>
+            <div>
+                <label>Obtenir la brochure</label>
+            </div>
+            <div>
+                <input type="radio" id="brochure" name="brochure" value="true" checked>
+                <label for="brochure">Oui</label>
 
-            <input type="radio" id="brochure" name="brochure" value="false">
-            <label for="brochure">Non</label>
+                <input type="radio" id="brochure" name="brochure" value="false">
+                <label for="brochure">Non</label>
+            </div>
         </div>
 
         <div class="form-conscent-container">
