@@ -38,7 +38,7 @@
         line-height: 1.5em;
         padding-left: 1rem;
         padding-right: 1rem;
-        font-size: 1.2em;
+        font-size: 1.1em;
         color: var(--reversed-color);
     }
 
@@ -107,6 +107,6 @@
         {% if variante.baseline %}{{ variante.baseline | safe }}{% else %}{{ default_baseline | safe }}{% endif %}
     </div>
     <div class="menu-cta">
-        <a href="#form" class="menu-cta-button">{{ variante.cta_btn_form_nav }}</a>
+        <a href="#form" class="menu-cta-button" data-tracked="click_voir_brochure_menu">{{ variante.cta_btn_form_nav }}</a>
     </div>
 </nav>

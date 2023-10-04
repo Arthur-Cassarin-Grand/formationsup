@@ -143,6 +143,7 @@
             formData.forEach((value, key) => {
                 data[key] = value;
             });
+
             fetch("https://leadflow.cardata.fr/api", {
                 method: "POST",
                 headers: {

@@ -18,18 +18,16 @@ module.exports = function (eleventyConfig) {
 
     // TRACKING
     // Balise GA4 + Google Ads
-    eleventyConfig.addGlobalData("ga4_tag", "G-VZ2H334F54"); // Utilisé pour GA4 et comme balise principale
-    eleventyConfig.addGlobalData("gads_tracking_id", "11323499333"); // Utilisé pour la balise de conversion (identique pour toutes les convs)
+    eleventyConfig.addGlobalData("ga4_tag", "G-3WQF0XCVY1"); // Utilisé pour GA4 et comme balise principale
+    eleventyConfig.addGlobalData("gads_tracking_id", "11361689811"); // Utilisé pour la balise de conversion (identique pour toutes les convs)
     // RAPPEL POUR FORMULAIRES : dans la TYP, ces paramètres GET doivent être présents : phone, mail, rid, score
-    eleventyConfig.addGlobalData("gads_valid_leads_tracking_label", "223lCMy44NwYEMXGu5cq"); // For GOOD leads
-    eleventyConfig.addGlobalData("gads_not_valid_leads_tracking_label", "J1QPCJaS49wYEMXGu5cq"); // For BAD leads
+    eleventyConfig.addGlobalData("gads_valid_leads_tracking_label", "QScgCPrSx-gYENPB1qkq"); // For GOOD leads
+    eleventyConfig.addGlobalData("gads_not_valid_leads_tracking_label", ""); // For BAD leads
     eleventyConfig.addGlobalData("gads_leads_tracking_base_value", "50"); // must be decimal
     eleventyConfig.addGlobalData("allow_only_score_gt", 0); // Track leads submissions with GET "score" > to X
     eleventyConfig.addGlobalData("gads_tracking_currency", "EUR");
-    // Google Optimize
-    eleventyConfig.addGlobalData("google_optimize_id", "OPT-59JN2T2");
     // Clarity
-    eleventyConfig.addGlobalData("clarity_id", "iv591ryqf7");
+    eleventyConfig.addGlobalData("clarity_id", "j5g8xuuncg");
 
     eleventyConfig.addGlobalData("societe_nom", "Celt Consulting SAS");
     eleventyConfig.addGlobalData("societe_mail", "bonjour@emile-et-arthur.com");
