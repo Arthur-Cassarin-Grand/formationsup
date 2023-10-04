@@ -1,0 +1,117 @@
+{# Formulaire sur 1 colonne, avec type de RDV #}
+<style>
+    .form-client input[type="text"], .form-client input[type="email"] {
+        width: 95%;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 1.2em;
+        margin-bottom: 1rem;
+        border: 1px solid lightgray;
+        box-shadow: 2px 2px 5px rgb(128, 128, 128);
+        color: var(--normal-color);
+    }
+
+    .form-client ::placeholder {
+        color: var(--normal-color);
+    }
+
+    .form-client .form-conscent-container {
+        text-align: justify;
+    }
+
+    .form-client .form-conscent-container .conscent-checkbox {
+        transform: scale(1.5);
+        margin-right: 1rem;
+    }
+
+    .form-client input[type="radio"] {
+        transform: scale(1.5);
+    }
+
+    .form-brochure {
+        text-align: justify;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .form-client select {
+        width: 100%;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 1.2em;
+        margin-bottom: 1rem;
+        border: 1px solid lightgray;
+        box-shadow: 2px 2px 5px rgb(128, 128, 128);
+        color: var(--normal-color);
+    }
+
+    .form-client-btn-submit {
+        border-radius: 20px;
+        padding: 20px 60px;
+        background-color: var(--primary-color);
+        border: 0;
+        color: var(--normal-color);
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+</style>
+<div class="align-center">
+    <form id="form-catalog" class="form-client">
+        <input type="text" name="forname" id="forname" placeholder="Prénom" required />
+        <input type="text" name="lastname" id="lastname" placeholder="Nom" required />
+        <input type="email" name="email" id="email" placeholder="E-mail" required />
+        <select name="course-type" id="course-type" required>
+            <option value="" selected="selected">Choix de la formation</option>
+            <option value="Comptabilité">Comptabilité</option>
+            <option value="Commerce international">Commerce international</option>
+            <option value="Design graphique et digital">Design graphique et digital</option>
+            <option value="Animation - 3D - VFX">Animation - 3D - VFX</option>
+            <option value="Architecture intérieure">Architecture intérieure</option>
+            <option value="Assurance">Assurance</option>
+            <option value="Banque - Gestion de patrimoine">Banque - Gestion de patrimoine</option>
+            <option value="Esthétique - Coiffure">Esthétique - Coiffure</option>
+            <option value="Pâtisserie">Pâtisserie</option>
+            <option value="Business gaming">Business gaming</option>
+            <option value="Développement">Développement</option>
+            <option value="Commercial - Relation client">Commercial - Relation client</option>
+            <option value="Retail - Point de vente">Retail - Point de vente</option>
+            <option value="Communication">Communication</option>
+            <option value="Cuisine">Cuisine</option>
+            <option value="Data - IA">Data - IA</option>
+            <option value="Design &amp; gaming">Design gaming</option>
+            <option value="Marketing">Marketing</option>
+            <option value="E-sport">E-sport</option>
+            <option value="Finance - Contrôle de gestion">Finance - Contrôle de gestion</option>
+            <option value="Fiscalité">Fiscalité</option>
+            <option value="Programmation gaming">Programmation gaming</option>
+            <option value="Management - Stratégie d&#039;entreprise">Management - Stratégie d'entreprise</option>
+            <option value="Gestion de projet">Gestion de projet</option>
+            <option value="Social - Paie">Social - Paie</option>
+            <option value="Hébergement - Management">Hébergement - Management</option>
+            <option value="Immobilier">Immobilier</option>
+            <option value="Immobilier et Décoration">Immobilier et Décoration</option>
+            <option value="Infra - Sécurité">Infra - Sécurité</option>
+            <option value="Office management - Secrétariat">Office management - Secrétariat</option>
+            <option value="Politique RH - Recrutement">Politique RH - Recrutement</option>
+            <option value="Relation client">Relation client</option>
+            <option value="Sport Business">Sport business</option>
+        </select>
+
+        <div class="form-brochure">
+            <label>Obtenir la brochure</label>
+            <input type="radio" id="brochure" name="brochure" value="true" checked>
+            <label for="brochure">Oui</label>
+
+            <input type="radio" id="brochure" name="brochure" value="false">
+            <label for="brochure">Non</label>
+        </div>
+
+        <div class="form-conscent-container">
+            <input type="checkbox" name="conscent" id="conscent" class="conscent-checkbox" required /><label class="form-checkbox-label" for="conscent">J'accepte de recevoir des contenus promotionnels de la part de Formation Sup', pour son compte et pour ses partenaires.</label>
+        </div>
+
+        <div class="cta-container-btn-quote">
+            <button type="submit" class="form-client-btn-submit">VALIDER</button>
+        </div>
+    </form>
+</div>

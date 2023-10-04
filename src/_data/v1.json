@@ -1,0 +1,39 @@
+[
+    {
+      "variante": "1",
+      "baseline": "Formation diplomante, de chez vous, <strong>finançable jusqu'à 100%</strong>",
+      "titre_form": "LA <span class='emphasis-text-color'>FORMATION CERTIFIANTE 100% VIDÉO</span> NOUVELLE GÉNÉRATION",
+      "texte_intro":"Dites adieu aux rasoirs et à la cire douloureuse ! Découvrez le secret d'<strong>une peau lisse et sans poils, jour après jour</strong>.<br /><br /><strong>Libérez-vous des contraintes de l'épilation quotidienne</strong>.<br /><br />Avec des <strong>résultats permanents, <strong>vous économiserez du temps et de l'argent à long terme</strong>.",
+      "accroche_form":"TROUVEZ VOTRE FORMATION IDÉALE",
+      "cta_btn_form_nav": "TÉLÉCHARGER LA BROCHURE",
+      "infobar": "RENTRÉE IMMÉDIATE : INSCRIVEZ-VOUS VITE !",
+      "args_puces": [
+        "Diplômes et certificats professionnels <strong>reconnus par l'État</strong>, du CAP à BAC+5.",
+        "<strong>250 formations dans 15 filières métier</strong>, avec un fort taux d'embauche, en présentiel ou en télétravail.",
+        "Formation possible <strong>en alternance</strong> pour être rémunéré pendant vos études.",
+        "<strong>Avec une plateforme de discussion avec les étudiants de votre filière</strong> pour favoriser l'entraide au sein de votre promotion.",
+        "<strong>Satisfait ou remboursé</strong>, avec facilité de paiement sur 12, 24 ou 36 mois."
+      ],
+      "pictos": [
+        {
+          "picto_name":"credit_score",
+          "picto_text":"<strong>Finançable jusqu'à 100%</strong>, via le CPF, Pôle Emploi et l'alternance"
+        },
+        {
+          "picto_name":"location_home",
+          "picto_text":"<strong>De chez vous</strong>, 100% en vidéo, avec des cours modernes"
+        },
+        {
+          "picto_name":"play_circle",
+          "picto_text":"<strong>100% en vidéo</strong>, passez les examens en ligne"
+        },
+        {
+          "picto_name":"schedule",
+          "picto_text":"<strong>À votre rythme</strong>, même en parallèle d'un autre travail"
+        }
+      ],
+      "pictos_color": "#EF9B11",
+      "picto_font_size": "4em",
+      "pictos_number": "4"
+    }
+]

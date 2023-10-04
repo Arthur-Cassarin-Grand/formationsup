@@ -1,0 +1,174 @@
+---
+layout: base.njk
+---
+
+{% if variante.infobar %}
+    <div class="infobar">{{ variante.infobar | safe }}</div>
+{% endif %}
+
+<script type="text/javascript">
+    const getDateInXDays = () => {
+        const today = new Date();
+        const inXDays = new Date(today);
+        inXDays.setDate(today.getDate() + 7);
+        let dayOfWeek = inXDays.getDay();
+        if (dayOfWeek === 6) {
+            inXDays.setDate(inXDays.getDate() + 2);
+        } else if (dayOfWeek === 0) {
+            inXDays.setDate(inXDays.getDate() + 1);
+        }
+        const options = { day: 'numeric', month: 'long' };
+        return inXDays.toLocaleDateString('fr-FR', options).toUpperCase();
+    };
+
+    document.getElementById("date_promo").innerHTML = getDateInXDays();
+</script>
+
+{% include "engine/blocks/nav/nav_1.njk" %}
+
+
+{# {% if variante.bandeau_header_img %}
+    <div id="bandeau_header_img" style="background: url('/img/{{ variante.bandeau_header_img }}')"></div>
+{% endif %} #}
+
+<header>
+    <h1 class="form-title">{{ variante.titre_form | safe }}</h1>
+    <div class="pure-g">
+        <div class="pure-u-1 pure-u-md-2-3" style="padding: 20px">
+            <br />
+            {% for puce in variante.args_puces %}
+                <div class="puce">
+                    <img src="/img/puce.png" class="puce_img pure-img" alt="" />
+                    <div class="puce_text">{{ puce | safe }}</div>
+                </div>
+            {% endfor %}
+            <br />
+            <h4 class="align-center">L'épilation définitive chez Laselis</h4>
+            {% include "engine/blocks/pictos/pictos_1.njk" %}
+        </div>
+        <div class="pure-u-1 pure-u-md-1-3 l-box" id="form">
+            <div class="form-box form_dark">
+                <p class="white titre_formulaire">{{ variante.accroche_form }}</p>
+                {% include "forms/cla/form_1a.njk" %}<br />
+                <p style="text-align:center; font-weight:bold">Gratuite et sans engagement</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <h2>{{ variante.title_reviews }}</h2>
+    <div id="reviews">
+        <div class="review-widget_net" data-uuid="9a236212-23a2-4362-91ea-63e6c22c30ea" data-template="16" data-lang="fr" data-theme="light" data-filter="5"></div><script src="https://grwapi.net/widget.min.js"></script>
+    </div>
+</section>
+
+<section>
+    <div class="pure-g">
+        <div class="pure-u-1 pure-u-md-1-2 l-box" id="tarifs">
+            <h2>Nos tarifs</h2>
+            <p><strong>Il faut compter entre 5 et 10 séances selon les personnes pour obtenir un résultat parfait</strong>. Lors de la première séance, une fourchette plus précise vous sera donnée.</p>
+            <p>Tous les tarifs sont à la séance, sans engagement sur le nombre de séances.</p>
+            <div class="accordion">
+                <details class="accordion-item" open>
+                    <summary class="accordion-label">Promotions</summary>
+                    <div class="accordion-content">
+                        {% include "tarifs_promotions.njk" %}
+                    </div>
+                </details>
+                <details class="accordion-item">
+                    <summary class="accordion-label">Forfaits</summary>
+                    <div class="accordion-content">
+                        {% include "tarifs_forfaits.njk" %}
+                    </div>
+                </details>
+                <details class="accordion-item">
+                    <summary class="accordion-label">Tarifs par zone</summary>
+                    <div class="accordion-content">
+                        {% include "tarifs_zone.njk" %}
+                    </div>
+                </details>
+                <details class="accordion-item">
+                    <summary class="accordion-label">Tarifs pour le visage</summary>
+                    <div class="accordion-content">
+                        {% include "tarifs_visage.njk" %}
+                    </div>
+                </details>
+            </div>
+
+            <h4 class="align-center">Le saviez-vous ?</h4>
+
+            <p>Selon une étude britanique de 2015, une femme passe <strong>en moyenne 72 jours de sa vie à s'épiler et près de 30 000 € en matériel et séances chez l'esthéticienne</strong>.</p>
+            <p>Le coût de l'épilation définitive <strong>se rembourse en quelques années seulement</strong> et vous fait <strong>économiser un temps précieux</strong> pour faire ce que vous aimez.</p>
+            <p>Laselis vous propose des <strong>facilités de paiement</strong> pour rendre l'épilation définitive accessible au plus grand nombre.</p>
+            <p>Nous serons ravis de vous faire une <strong>simulation dans notre centre</strong> lors de votre <strong>première consultation offerte</strong> !</p>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2">
+            <div class="align-center">
+                <h2>Notre centre de {{ ville }}</h2>
+                <p style="text-align: center;"><strong>Adresse</strong> : {{ address }}</p>
+                <p style="text-align: center;"><strong>Téléphone</strong> : {{ phone }}</p>
+                <span class="hide-desktop">
+                    <iframe src="{{ gmap_url }}" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <br /><br /><br />
+                    <a href="{{ gmap_link }}" class="cta-btn-secondary">Itinéraire Google Maps</a>
+                    <br /><br /><br />
+                </span>
+                <span class="hide-mobile">
+                    <iframe src="{{ gmap_url }}" width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </span>
+                <h4>Nos appareils laser</h4>
+                <div style="padding-left: 20px; padding-right: 20px;">
+                    <p>Nous utilisons des <strong>lasers de dernière génération</strong> : le <em>GMaxPro®</em> de Candela™ et le <em>Clarity 2®</em> de Lutronic™ avec un système de refroidissement pour <strong>éviter la sensation de picotement lors des séances</strong>.</p>
+                    <p>Ils <strong>permettent de traiter toutes les couleurs de peau</strong> (blanches, métisses et noires).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Réservez votre consultation offerte, en ligne</h2>
+    <div class="pure-g">
+        <div class="pure-u-1 pure-u-md-1-2 l-box" style="padding-right: 40px">
+            <p>Il suffit de <strong>sélectionner la date et l'heure qui vous conviennent</strong> <span class="hide-desktop"><a href="#" onclick="Calendly.initPopupWidget({url: '{{ calendly_url }}?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=8d5524'});return false;">dans le calendrier ci-dessous</a></span><span class="hide-mobile">dans ce calendrier</span>.</p>
+            <p>Nous vous confirmerons votre rendez-vous par e-mail et vous recevrez un rappel par SMS 24h avant votre consultation.</p>
+            <p><strong>Profitez-en, cette consultation est offerte !</strong></p>
+            <img src="img/centres-laser.jpg" alt="centre laser {{ ville }}" class="pure-img" />
+        </div>
+        
+        <div class="pure-u-1 pure-u-md-1-2 hide-mobile">
+            <br /><br />
+            <div class="calendly-form" id="calendly_form">
+                <div class="calendly-inline-widget" data-url="{{ calendly_url }}?hide_event_type_details=1&hide_gdpr_banner=1&background_color=FAF9F6&primary_color=8d5524" style="min-width:320px;height:700px;"></div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="hide-desktop">
+        <div class="calendly-inline-widget" data-url="{{ calendly_url }}?hide_event_type_details=1&hide_gdpr_banner=1&background_color=FAF9F6&primary_color=8d5524" style="min-width:320px;height:700px;"></div>
+    </div>
+</section>
+
+<section>
+    <h2>Questions / réponses</h2>
+    <p><em>Cliquez sur l'un des boutons ci-dessous.</em></p>
+    {% include "engine/blocks/accordion/accordion_1.njk" %}
+    <br />
+    <h2>Avez-vous d'autres questions ?</h2>
+    <p>Lors de la première consultation que nous vous offrons, vous pourrez poser toutes vos questions et obtenir un avis médical. Un devis personnalisé vous sera proposé, il sera gratuit et sans engagement.</p>
+    <br /><br />
+    <div class="align-center">
+        <div class="hide-mobile">
+            <a data-tracked="lp_click_calendly" onclick="Calendly.initPopupWidget({url: '{{ calendly_url }}?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=8d5524'});return false;" class="cta-btn-quote">{{ variante.cta_btn_form }}</a>
+        </div>
+        <div class="hide-desktop">
+            <a data-tracked="lp_click_calendly" onclick="Calendly.initPopupWidget({url: '{{ calendly_url }}?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=8d5524'});return false;" class="cta-btn-quote">{{ variante.cta_btn_form_mobile }}</a>
+        </div>
+    </div>
+    <br /><br />
+</section>
+
+<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: '{{ calendly_url }}?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=8d5524', text: 'Prendre rendez-vous', color: 'red', textColor: '#ffffff', branding: false }); }</script>
+
+{% include "footer.njk" %}

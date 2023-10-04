@@ -1,0 +1,17 @@
+{#
+"logos_scp_list": [
+    {"name":"figaro"},
+    {"name":"parisien"},
+    {"name":"echos"},
+    {"name":"capital"}
+]
+#}
+{% if variante.logos_scp_list %}
+<div class="pure-g logos_scp align-center">
+    {% for logo_scp in variante.logos_scp_list %}
+    <div class="pure-u-1 pure-u-md-1-{% if logos_scp_nb %}{{ logos_scp_nb }}{% else %}4{% endif %}">
+        <img src="/img/logos_scp/{{ logo_scp.name }}.png" alt="" />
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
