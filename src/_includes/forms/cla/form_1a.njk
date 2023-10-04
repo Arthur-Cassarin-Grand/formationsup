@@ -1,6 +1,6 @@
 {# Formulaire sur 1 colonne, avec type de RDV #}
 <style>
-    .form-client input[type="text"], .form-client input[type="email"], .form-client input[type="phone"] {
+    .form-client input[type="text"], .input-text, .form-client input[type="email"], .form-client input[type="tel"] {
         width: 95%;
         border-radius: 10px;
         padding: 10px;
@@ -57,9 +57,9 @@
 </style>
 <div class="align-center">
     <form id="form-catalog" class="form-client">
-        <input type="text" name="forname" id="forname" placeholder="Prénom" required />
-        <input type="text" name="lastname" id="lastname" placeholder="Nom" required />
-        <input type="phone" name="phone" id="phone" placeholder="Téléphone" required />
+        <input type="text" class="input-text" name="forname" id="forname" placeholder="Prénom" required />
+        <input type="text" class="input-text" name="lastname" id="lastname" placeholder="Nom" required />
+        <input type="tel" name="phone" id="phone" placeholder="Téléphone" required />
         <input type="email" name="email" id="email" placeholder="E-mail" required />
         <select name="course-type" id="course-type" required>
             <option value="" selected="selected">Choix de la formation</option>
