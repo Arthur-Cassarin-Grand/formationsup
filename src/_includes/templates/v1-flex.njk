@@ -6,7 +6,7 @@ layout: base.njk
     .infobar {
         background-color: var(--primary-color);
         color: white;
-        font-size: var(--p-font-size);
+        font-size: 1em;
         text-align: center;
         font-weight: 600;
         padding-top: 10px;
@@ -225,16 +225,12 @@ layout: base.njk
     <p class="cta-course-branches-text">C'est gratuit et sans engagement.</p>
     <style>
         .cta-course-branches-container {
-            display: grid;
-            gap: 5rem;
             padding-left: 2rem;
             padding-right: 2rem;
-            grid-template-columns: 1fr;
-            justify-content: space-evenly;
         }
 
-        .cta-course-branches-container .btn-primary {
-
+        .cta-course-branches-container div {
+            margin-bottom: 5rem;
         }
 
         .cta-course-branches {
@@ -245,15 +241,11 @@ layout: base.njk
         }
 
         .cta-course-branches-text {
-            margin-top: 3rem;
+            margin-top: 1rem;
         }
 
         /* Desktop et grands écrans */
         @media (min-width: 900px) {
-            .cta-course-branches-container {
-                gap: 1rem;
-                grid-template-columns: 1fr 1fr;
-            }
         }
     </style>
 </div>
