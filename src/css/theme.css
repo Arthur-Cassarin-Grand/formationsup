@@ -150,6 +150,11 @@ header {
   padding-right: 20px;
 }
 
+.mozaique-container {
+  max-width: 100%;
+  margin-top: 2rem;
+}
+
 .page-container {
   margin-left: 2rem;
   margin-right: 2rem;
@@ -256,7 +261,7 @@ header::before {
   }
 
   header {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
 
   header::before {
@@ -296,7 +301,7 @@ header::before {
   }
 
   header {
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
   }
 
   header::before {
@@ -312,7 +317,7 @@ header::before {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding-bottom: 0;
+    padding-bottom: 2rem;
     z-index: -1;
   }
 

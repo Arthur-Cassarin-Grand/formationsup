@@ -34,7 +34,13 @@
       ],
       "pictos_color": "#EF9B11",
       "picto_font_size": "4em",
-      "pictos_number": "4"
+      "pictos_number": "4",
+      "logos_scp_list": [
+        {"name":"figaro"},
+        {"name":"parisien"},
+        {"name":"echos"},
+        {"name":"capital"}
+      ]
     },
     {
       "variante": "2",
