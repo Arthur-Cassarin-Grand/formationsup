@@ -21,15 +21,15 @@
         },
         {
           "picto_name":"chair",
-          "picto_text":"<strong>De chez vous</strong>, 100% en vidéo, avec des cours modernes"
+          "picto_text":"<strong>Apprenez de chez vous</strong>, avec des cours vidéos intéractifs"
         },
         {
-          "picto_name":"calendar_clock",
-          "picto_text":"<strong>À votre rythme</strong>, même en parallèle d'un autre travail"
+          "picto_name":"schedule",
+          "picto_text":"<strong>Compatible avec votre emploi du temps</strong>, même si vous travaillez à côté"
         },
         {
           "picto_name":"subscriptions",
-          "picto_text":"<strong>100% en vidéo</strong>, passez les examens en ligne"
+          "picto_text":"<strong>Passez vos examens en ligne</strong>, à votre rythme"
         }
       ],
       "pictos_color": "#EF9B11",
@@ -62,7 +62,7 @@
         },
         {
           "picto_name":"schedule",
-          "picto_text":"Compatible avec votre emploi du temps, même si vous travaillez à côté"
+          "picto_text":"<strong>Compatible avec votre emploi du temps</strong>, même si vous travaillez à côté"
         },
         {
           "picto_name":"subscriptions",
@@ -99,7 +99,7 @@
         },
         {
           "picto_name":"schedule",
-          "picto_text":"Compatible avec votre emploi du temps, même si vous travaillez à côté"
+          "picto_text":"<strong>Compatible avec votre emploi du temps</strong>, même si vous travaillez à côté"
         },
         {
           "picto_name":"subscriptions",
