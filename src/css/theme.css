@@ -168,7 +168,7 @@ header::before {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding-bottom: 25rem;
+  padding-bottom: 30rem;
   z-index: -1;
 }
 
