@@ -37,7 +37,13 @@ body {
   margin-right: 2rem;
 }
 
-/* Styles par défaut pour mobiles */
+.alternate-background {
+  background-color: var(--alternate-color);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 4rem;
+}
+
 
 .form-container {
   margin-top: 1rem;
@@ -61,13 +67,17 @@ body {
 
 .content h1 {
   font-size: var(--h1-font-size);
-  line-height: 1.5em;
+  line-height: 1.3em;
+  letter-spacing: -0.05em;
   font-weight: 500;
 }
 
 .content h2 {
   font-size: var(--h2-font-size);
-  font-weight: 300;
+  line-height: 1.3em;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: -0.05em;
   color: #8D5524;
   margin-bottom: 2rem;
 }
@@ -97,18 +107,6 @@ body {
   font-weight: 500;
 }
 
-.content .justify {
-  text-align: justify;
-}
-
-.content .titre_formulaire {
-  font-weight: bold;
-  font-size: 1.5em;
-  text-align: center;
-  padding-top: 20px;
-  color: #8D5524;
-}
-
 .content li {
   font-size: var(--p-font-size);
   line-height: 1.5em;
@@ -123,36 +121,6 @@ body {
   box-shadow: 2px 2px 5px rgb(128, 128, 128);
   border-radius: 20px;
   cursor: pointer;
-}
-
-.cta-container-btn-quote {
-  text-align: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
-.cta-btn-quote {
-  background-color: red;
-  color: white;
-  padding: 15px 25px 15px 25px;
-  cursor: pointer;
-  border-radius: 20px;
-  text-decoration: none;
-  font-size: 0.7em;
-  font-weight: bold;
-  box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0 8px 16px -8px;
-}
-
-.cta-btn-quote-header {
-  background-color: red;
-  color: white;
-  padding: 15px 25px 15px 25px;
-  cursor: pointer;
-  border-radius: 20px;
-  text-decoration: none;
-  font-size: 0.7em;
-  font-weight: bold;
-  box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0 8px 16px -8px;
 }
 
 .cta-btn-secondary {
@@ -195,21 +163,6 @@ header {
     margin-left: 4rem;
     margin-right: 4rem;
   }
-
-  header::before {
-    content:"";
-    margin-top: 150px;
-    min-height: 1500px;
-    background-image: url("/img/etudiant-1.jpg");
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0.15;
-    z-index: -9999;
-  }
 }
 
 /* Tablettes en orientation paysage */
@@ -220,16 +173,20 @@ header {
   }
 
   header::before {
-    content:"";
-    background-image: url("/img/etudiant-1.jpg");
-    background-size: cover;
+    content: "";
     position: absolute;
     top: 0;
-    right: 0;
-    bottom: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
     opacity: 0.15;
-    z-index: -9999;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 12px ), repeating-linear-gradient( #EF9B1155, #EF9B11 );
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    padding-bottom: 6rem;
   }
 
   .review {
@@ -245,28 +202,30 @@ header {
     margin-right: 6rem;
   }
 
-  header::before {
-    content:"";
-    background-image: url("/img/etudiant-1.jpg");
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0.15;
-    z-index: -9999;
+  header {
+    margin-bottom: 4rem;
   }
 
-  header {
-    margin-bottom: 12rem;
+  header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    opacity: 0.15;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 12px ), repeating-linear-gradient( #EF9B1155, #EF9B11 );
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    padding-bottom: 6rem;
   }
 
   .form-container {
     grid-template-columns: 2fr 1fr;
   }
-
-
 
   .review {
     grid-template-columns: 1fr 2fr;

@@ -42,54 +42,6 @@ layout: base.njk
     </div>
 </header>
 
-<h2 class="align-center">Formation Sup' et ses partenaires</h2>
-<style>
-    .block-social-numbers {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        text-align: center;
-        border-radius: 40px;
-        box-shadow: 2px 2px 5px rgb(128, 128, 128);
-        padding: 2rem;
-        margin-bottom: 4rem;
-    }
-
-    .social-number-numbers {
-        font-size: 4em;
-        color: var(--primary-color);
-        padding-bottom: 1rem;
-    }
-
-    .social-number-text {
-        font-size: 1.2em;
-    }
-
-    @media (min-width: 900px) {
-        .block-social-numbers {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-        }
-    }
-</style>
-<section class="block-social-numbers">
-    <div>
-        <div class="social-number-numbers">250</div>
-        <div class="social-number-text">Formations dans 15 filières</div>
-    </div>
-    <div>
-        <div class="social-number-numbers">90 000</div>
-        <div class="social-number-text">Apprenants en cours de formation</div>
-    </div>
-    <div>
-        <div class="social-number-numbers">1 300</div>
-        <div class="social-number-text">Conseillers, formateurs et coachs</div>
-    </div>
-    <div>
-        <div class="social-number-numbers">50 000</div>
-        <div class="social-number-text">Modules de formation vidéo, en illimité</div>
-    </div>
-</section>
-
 <h2 class="align-center">Il y a forcément une filière faite pour vous !</h2>
 
 <section class="block-course-branches">
@@ -219,40 +171,55 @@ layout: base.njk
     </div>
 </section>
 
-<div class="cta-course-branches">
-    <div class="cta-course-branches-container">
-        <div><a href="#form" class="btn-primary animate-form" data-tracked="click_voir_brochure_content"><span class="material-symbols-rounded">sim_card_download</span> VOIR LA BROCHURE</a></div>
-        <div><a href="#form" class="cta-btn-secondary animate-form" data-tracked="click_etre_rappele"><span class="material-symbols-rounded">support_agent</span> JE VEUX ÊTRE RAPPELÉ</a></div>
-    </div>
-    <p class="cta-course-branches-text">C'est gratuit et sans engagement.</p>
+<div class="alternate-background">
+    <h2 class="align-center">Formation Sup' et ses partenaires</h2>
     <style>
-        .cta-course-branches-container {
-
-        }
-
-        .cta-course-branches-container div {
-            margin-bottom: 5rem;
-        }
-
-        .cta-course-branches {
-            margin-top: 6rem;
-            margin-bottom: 6rem;
+        .block-social-numbers {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
             text-align: center;
-            align-items: center;
+            border-radius: 40px;
+            box-shadow: 2px 2px 5px rgb(128, 128, 128);
+            padding: 2rem;
+            margin-bottom: 4rem;
+            background: white;
         }
 
-        .cta-course-branches-text {
-            margin-top: 0.5rem;
+        .social-number-numbers {
+            font-size: 3em;
+            color: var(--primary-color);
+            padding-bottom: 1rem;
         }
 
-        /* Desktop et grands écrans */
+        .social-number-text {
+            font-size: 1.2em;
+        }
+
         @media (min-width: 900px) {
-            .cta-course-branches-container {
-                padding-left: 2rem;
-                padding-right: 2rem;
+            .block-social-numbers {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
             }
         }
     </style>
+    <section class="block-social-numbers">
+        <div>
+            <div class="social-number-numbers">250</div>
+            <div class="social-number-text">Formations dans 15 filières</div>
+        </div>
+        <div>
+            <div class="social-number-numbers">90 000</div>
+            <div class="social-number-text">Apprenants en cours de formation</div>
+        </div>
+        <div>
+            <div class="social-number-numbers">1 300</div>
+            <div class="social-number-text">Conseillers, formateurs et coachs</div>
+        </div>
+        <div>
+            <div class="social-number-numbers">50 000</div>
+            <div class="social-number-text">Modules de formation vidéo, en illimité</div>
+        </div>
+    </section>
 </div>
 
 <h2 class="align-center">Quelques parcours de nos étudiants</h2>
@@ -282,6 +249,8 @@ layout: base.njk
 
     .review-text {
         font-style: italic;
+        text-align: justify;
+        line-height: 1.5em;
     }
 
     .review-image {
@@ -336,8 +305,8 @@ layout: base.njk
     }
 
     .cta-steps {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+        margin-top: 4rem;
+        margin-bottom: 3rem;
     }
 </style>
 <section class="block-steps">
