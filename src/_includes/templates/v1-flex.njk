@@ -15,6 +15,27 @@ layout: base.njk
     .infobar a {
         color: white;
     }
+
+    /* Tablettes en orientation portrait */
+    @media (min-width: 600px) and (max-width: 1024px) and (orientation: portrait) {
+        .infobar {
+            font-size: 1.2em;
+        }
+    }
+
+    /* Tablettes en orientation paysage */
+    @media (min-width: 600px) and (max-width: 1024px) and (orientation: landscape) {
+        .infobar {
+            font-size: 1.2em;
+        }
+    }
+
+    /* Desktop et grands écrans */
+    @media (min-width: 1025px) {
+        .infobar {
+            font-size: 1.2em;
+        }
+    }
 </style>
 {% if variante.infobar %}
     <div class="infobar">{{ variante.infobar | safe }}</div>
