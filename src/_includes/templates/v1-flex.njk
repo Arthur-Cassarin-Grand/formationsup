@@ -43,9 +43,7 @@ layout: base.njk
 
 {% include "engine/blocks/nav/nav_1.njk" %}
 
-<div class="page-container">
-
-<header>
+<header class="page-container">
     <div class="form-container">
         <div>
             <div class="form-title-container">
@@ -65,7 +63,7 @@ layout: base.njk
 
 <h2 class="align-center">Il y a forcément une filière faite pour vous !</h2>
 
-<section class="block-course-branches">
+<section class="block-course-branches page-container">
     <style>
         .video-wrapper {
             position: relative;
@@ -236,7 +234,7 @@ layout: base.njk
             }
         }
     </style>
-    <section class="block-social-numbers">
+    <section class="block-social-numbers page-container">
         <div>
             <div class="social-number-numbers">250</div>
             <div class="social-number-text">Formations dans 15 filières</div>
@@ -267,6 +265,7 @@ layout: base.njk
         grid-template-columns: 1fr;
         gap: 1rem;
         margin-bottom: 2rem;
+        justify-items: center
     }
 
     .review-box {
@@ -301,7 +300,7 @@ layout: base.njk
         }
     }
 </style>
-<section class="block-course-reviews">
+<section class="block-course-reviews page-container">
     <div class="review">
         <img src="/img/amelie.jpg" class="review-image" />
         <div class="review-box">
@@ -326,7 +325,7 @@ layout: base.njk
     <div class="review">
         <img src="/img/jean-michel.jpg" class="review-image" />
         <div class="review-box">
-            <p class="review-text">23 ans de camion, le dos en vrac, rester assis dans mon camion toute la journée est devenu impossible. Une maison à finir de payer, une famille dont il faut s'occuper. Et très vite, je me rend compte que le nombre d'options pour changer de boulot est limité ! N'étant pas un adepte des ordinateurs, c'est un proche qui m'a parlé de ce type de plateforme. Le diplôme est un plus, mais je cherchais surtout un contenu très pratico-pratique pour arriver à la retraite en faisant chaque jour ce qui me plaît. Chef Hervé est un pédagogue-né, il a rallumé le gaz de ma passion pour la cuisine. J'ai repris le restautant de mon père, avec mon épouse au service. Je suis définitivement plus heureux aujourd'hui ! Il n'est jamais trop tard pour changer de vie !</p>
+            <p class="review-text">18 ans de camion, le dos en vrac, rester assis dans mon camion toute la journée est devenu impossible. Une maison à finir de payer, une famille dont il faut s'occuper. Et très vite, je me rend compte que le nombre d'options pour changer de boulot est limité ! N'étant pas un adepte des ordinateurs, c'est un proche qui m'a parlé de ce type de plateforme. Le diplôme est un plus, mais je cherchais surtout un contenu très pratico-pratique pour arriver à la retraite en faisant chaque jour ce qui me plaît. Chef Hervé est un pédagogue-né, il a rallumé le gaz de ma passion pour la cuisine. J'ai repris le restautant de mon père, avec mon épouse au service. Je suis définitivement plus heureux aujourd'hui ! Il n'est jamais trop tard pour changer de vie !</p>
             <p class="review-author"><strong>Jean-Michel</strong> <span class="material-symbols-rounded">school</span> Chef cuisinier</p>
         </div>
     </div>
@@ -350,7 +349,7 @@ layout: base.njk
         margin-bottom: 3rem;
     }
 </style>
-<section class="block-steps">
+<section class="block-steps page-container">
     <p class="align-center">Ces trois étapes sont complètement <strong>gratuites et sans engagement</strong>.</p>
     <style>
         .pictos-3 {
