@@ -168,7 +168,7 @@ header::before {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding-bottom: 12rem;
+  padding-bottom: 20rem;
   z-index: -1;
 }
 
@@ -351,4 +351,9 @@ header::before {
 
 .img-responsive {
   max-width: 100%;
+}
+
+.invisible-link {
+  text-decoration: inherit;
+  color: inherit;
 }
