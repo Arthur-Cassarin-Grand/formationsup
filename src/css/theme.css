@@ -272,6 +272,7 @@ header::before {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    padding-bottom: 0;
     z-index: -1;
   }
 
@@ -311,6 +312,7 @@ header::before {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    padding-bottom: 0;
     z-index: -1;
   }
 
