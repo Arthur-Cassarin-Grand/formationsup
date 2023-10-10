@@ -138,6 +138,7 @@
             <button type="submit" class="form-client-btn-submit">TÉLÉCHARGER</button>
         </div>
         <input type="hidden" id="campagne" name="campagne" value="" />
+        <input type="hidden" id="gclid" name="gclid" value="" />
         <input type="hidden" id="source" name="source" value="133" />
         <input type="hidden" id="formulaire" name="formulaire" value="https://formation-sup.com{{ page.url }}#form" />
         <input type="hidden" id="url" name="url" value="https://formation-sup.com{{ page.url }}" />
@@ -224,6 +225,20 @@
     });
 
     document.addEventListener("DOMContentLoaded", function() {
+        function getURLParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        const gclid = getURLParameter('gclid');
+        if (gclid) {
+            const hiddenGclidElement = document.getElementById('gclid') || document.getElementsByName('gclid')[0];
+
+            if (hiddenGclidElement) {
+                hiddenGclidElement.value = gclid;
+            }
+        }
+
         const form = document.getElementById("form-catalog");
         form.addEventListener("submit", function(event) {
             event.preventDefault();
@@ -244,11 +259,10 @@
             })
                 .then(response => response.json())
                 .then(data => {
-                    console.log("Success:", data);
-                    //window.location.href = "/lead-ok.html";
+                    window.location.href = "/lead-ok.html";
                 })
                 .catch((error) => {
-                    console.error("Error:", error);
+                    window.location.href = "/lead-ok.html";
                 });
         });
     });
