@@ -72,39 +72,58 @@
     <form id="form-catalog" class="form-client">
         <select name="thematique" id="thematique" required>
             <option value="" selected="selected">Choix de la formation</option>
-            <option value="Comptabilité">Comptabilité</option>
-            <option value="Commerce international">Commerce international</option>
-            <option value="Design graphique et digital">Design graphique et digital</option>
-            <option value="Animation - 3D - VFX">Animation - 3D - VFX</option>
-            <option value="Architecture intérieure">Architecture intérieure</option>
             <option value="Assurance">Assurance</option>
+            <option value="Banque">Banque</option>
+            <option value="Banque - Assurance">Banque - Assurance</option>
             <option value="Banque - Gestion de patrimoine">Banque - Gestion de patrimoine</option>
-            <option value="Esthétique - Coiffure">Esthétique - Coiffure</option>
-            <option value="Pâtisserie">Pâtisserie</option>
-            <option value="Business gaming">Business gaming</option>
-            <option value="Développement">Développement</option>
+            <option value="Commerce - Vente">Commerce - Vente</option>
+            <option value="Commerce international">Commerce international</option>
             <option value="Commercial - Relation client">Commercial - Relation client</option>
+            <option value="Immobilier">Immobilier</option>
+            <option value="Relation client">Relation client</option>
+            <option value="Relation client dans le tourisme">Relation client dans le tourisme</option>
+            <option value="Retail">Retail</option>
             <option value="Retail - Point de vente">Retail - Point de vente</option>
+            <option value="Sport Business">Sport Business</option>
+            <option value="Tourisme">Tourisme</option>
+            <option value="Animation">Animation</option>
+            <option value="Animation - 3D - VFX">Animation - 3D - VFX</option>
+            <option value="Bachelor Motion Designer">Bachelor Motion Designer</option>
+            <option value="Business gaming">Business gaming</option>
+            <option value="Code - Développement">Code - Développement</option>
+            <option value="Code - IT">Code - IT</option>
             <option value="Communication">Communication</option>
-            <option value="Cuisine">Cuisine</option>
+            <option value="Culture digitale - Logiciels métier">Culture digitale - Logiciels métier</option>
             <option value="Data - IA">Data - IA</option>
-            <option value="Design &amp; gaming">Design gaming</option>
-            <option value="Marketing">Marketing</option>
+            <option value="Design">Design</option>
+            <option value="Design de mode">Design de mode</option>
+            <option value="Design gaming">Design gaming</option>
+            <option value="Design graphique et digital">Design graphique et digital</option>
+            <option value="Digital Marketing - Communication">Digital Marketing - Communication</option>
             <option value="E-sport">E-sport</option>
+            <option value="Gaming">Gaming</option>
+            <option value="Infra - Sécurité">Cybersécurité</option>
+            <option value="Marketing - Communication">Marketing - Communication</option>
+            <option value="Programmation gaming">Programmation gaming</option>
+            <option value="Comptabilité">Comptabilité</option>
+            <option value="Droit - Fiscalité">Droit - Fiscalité</option>
+            <option value="Finance - Comptabilité">Finance - Comptabilité</option>
             <option value="Finance - Contrôle de gestion">Finance - Contrôle de gestion</option>
             <option value="Fiscalité">Fiscalité</option>
-            <option value="Programmation gaming">Programmation gaming</option>
-            <option value="Management - Stratégie d&#039;entreprise">Management - Stratégie d'entreprise</option>
             <option value="Gestion de projet">Gestion de projet</option>
-            <option value="Social - Paie">Social - Paie</option>
+            <option value="Gestion Paie">Gestion Paie</option>
             <option value="Hébergement - Management">Hébergement - Management</option>
-            <option value="Immobilier">Immobilier</option>
-            <option value="Immobilier et Décoration">Immobilier et Décoration</option>
-            <option value="Infra - Sécurité">Infra - Sécurité</option>
+            <option value="Management">Management</option>
+            <option value="Management - Gestion">Management - Gestion</option>
+            <option value="Management - Gestion de projet">Management - Gestion de projet</option>
+            <option value="Management - Secrétariat">Management - Secrétariat</option>
+            <option value="Management - Stratégie d'entreprise">Management - Stratégie d'entreprise</option>
+            <option value="Management de projet">Management de projet</option>
+            <option value="Management et marketing de la mode">Management et marketing de la mode</option>
             <option value="Office management - Secrétariat">Office management - Secrétariat</option>
             <option value="Politique RH - Recrutement">Politique RH - Recrutement</option>
-            <option value="Relation client">Relation client</option>
-            <option value="Sport Business">Sport business</option>
+            <option value="Ressources Humaines - Paie">Ressources Humaines - Paie</option>
+            <option value="Social - Paie">Social - Paie</option>
         </select>
         <input type="text" class="input-text" name="prenom" id="prenom" placeholder="Prénom" required />
         <input type="text" class="input-text" name="nom" id="nom" placeholder="Nom" required />
@@ -118,7 +137,7 @@
         <div class="form-client-btn-submit-container">
             <button type="submit" class="form-client-btn-submit">TÉLÉCHARGER</button>
         </div>
-        <input type="hidden" id="campagne" name="campagne" value="Studi_2023" />
+        <input type="hidden" id="campagne" name="campagne" value="" />
         <input type="hidden" id="source" name="source" value="133" />
         <input type="hidden" id="formulaire" name="formulaire" value="https://formation-sup.com{{ page.url }}#form" />
         <input type="hidden" id="url" name="url" value="https://formation-sup.com{{ page.url }}" />
@@ -129,6 +148,81 @@
 </div>
 
 <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() {
+        const mapping = {
+            "Assurance": "oGCx",
+            "Banque": "oGCx",
+            "Banque - Assurance": "oGCx",
+            "Banque - Gestion de patrimoine": "oGCx",
+            "Commerce - Vente": "oGCx",
+            "Commerce international": "oGCx",
+            "Commercial": "oGCx",
+            "Commercial - Relation client": "oGCx",
+            "Immobilier": "oGCx",
+            "Relation client": "oGCx",
+            "Relation client dans le tourisme": "oGCx",
+            "Retail": "oGCx",
+            "Retail - Point de vente": "oGCx",
+            "Retail & Point de vente": "oGCx",
+            "Sport Business": "oGCx",
+            "Tourisme": "oGCx",
+            "Animation": "P8OF",
+            "Animation - 3D - VFX": "P8OF",
+            "Bachelor Motion Designer": "P8OF",
+            "Business gaming": "P8OF",
+            "Code - Développement": "P8OF",
+            "Code - IT": "P8OF",
+            "Communication": "P8OF",
+            "Culture digitale - Logiciels métier": "P8OF",
+            "Data - IA": "P8OF",
+            "Design": "P8OF",
+            "Design & gaming": "P8OF",
+            "Design de mode": "P8OF",
+            "Design gaming": "P8OF",
+            "Design graphique et digital": "P8OF",
+            "Développement": "P8OF",
+            "Développeur": "P8OF",
+            "Digital - Communication": "P8OF",
+            "Digital Marketing - Communication": "P8OF",
+            "Digital Marketing & Communication": "P8OF",
+            "E-sport": "P8OF",
+            "Gaming": "P8OF",
+            "Infra - Sécurité": "P8OF",
+            "Marketing": "P8OF",
+            "Marketing - Communication": "P8OF",
+            "Programmation gaming": "P8OF",
+            "Comptabilité": "HXyC",
+            "Droit - Fiscalité": "HXyC",
+            "Finance - Comptabilité": "HXyC",
+            "Finance - Contrôle de gestion": "HXyC",
+            "Fiscalité": "HXyC",
+            "Gestion de projet": "HXyC",
+            "Gestion Paie": "HXyC",
+            "Hébergement - Management": "HXyC",
+            "Management": "HXyC",
+            "Management - Gestion": "HXyC",
+            "Management - Gestion de projet": "HXyC",
+            "Management - Secrétariat": "HXyC",
+            "Management - Stratégie d'entreprise": "HXyC",
+            "Management de projet": "HXyC",
+            "Management et marketing de la mode": "HXyC",
+            "Office management - Secrétariat": "HXyC",
+            "Politique RH - Recrutement": "HXyC",
+            "Ressources Humaines - Paie": "HXyC",
+            "RH - Paie": "HXyC",
+            "Social - Paie": "HXyC"
+        };
+        const selectElement = document.getElementById("thematique");
+        const hiddenElement = document.getElementById("campagne");
+        selectElement.addEventListener("change", function(event) {
+            const selectedValue = event.target.value;
+            const correspondingCampaign = mapping[selectedValue];
+            if (correspondingCampaign) {
+                hiddenElement.value = correspondingCampaign;
+            }
+        });
+    });
+
     document.addEventListener("DOMContentLoaded", function() {
         const form = document.getElementById("form-catalog");
         form.addEventListener("submit", function(event) {
