@@ -149,6 +149,17 @@
 </div>
 
 <script type="text/javascript">
+    function formatFrenchPhoneNumber() {
+        const inputElement = document.getElementById('telephone');
+        let phoneNumber = inputElement.value;
+        phoneNumber = phoneNumber.replace(/\D/g, '');
+        if (phoneNumber.startsWith('33')) {
+            phoneNumber = '0' + phoneNumber.substring(2);
+        }
+        inputElement.value = phoneNumber;
+    }
+    document.getElementById('telephone').addEventListener('blur', formatFrenchPhoneNumber);
+
     document.addEventListener("DOMContentLoaded", function() {
         const mapping = {
             "Assurance": "oGCx",
