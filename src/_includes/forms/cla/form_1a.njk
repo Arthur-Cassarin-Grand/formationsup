@@ -158,6 +158,27 @@
         }
         inputElement.value = phoneNumber;
     }
+
+    function getUrlParameter(name) {
+        const url = window.location.href;
+        name = name.replace(/[\[\]]/g, '\\$&');
+        const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+        const results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+        const utmSource = getUrlParameter('utm_source');
+        if (utmSource) {
+            const hiddenField = document.getElementsByName('utm_source')[0];
+            if (hiddenField) {
+                hiddenField.value = utmSource;
+            }
+        }
+    });
+
     document.getElementById('telephone').addEventListener('blur', formatFrenchPhoneNumber);
 
     document.addEventListener("DOMContentLoaded", function() {
