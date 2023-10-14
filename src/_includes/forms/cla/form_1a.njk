@@ -135,7 +135,7 @@
         </div>
 
         <div class="form-client-btn-submit-container">
-            <button type="submit" class="form-client-btn-submit">TÉLÉCHARGER</button>
+            <button type="submit" class="form-client-btn-submit" disabled>TÉLÉCHARGER</button>
         </div>
         <input type="hidden" id="campagne" name="campagne" value="" />
         <input type="hidden" id="gclid" name="gclid" value="" />
@@ -150,14 +150,51 @@
 
 <script type="text/javascript">
     function formatFrenchPhoneNumber() {
+        // Get the input element and its value
         const inputElement = document.getElementById('telephone');
+        const submitButton = document.querySelector('.form-client-btn-submit');
         let phoneNumber = inputElement.value;
+
+        // Remove any non-digit characters
         phoneNumber = phoneNumber.replace(/\D/g, '');
+
+        // Check if the number starts with '33' and replace it with '0' if needed
         if (phoneNumber.startsWith('33')) {
             phoneNumber = '0' + phoneNumber.substring(2);
         }
+
+        // Validate the French phone number format
+        const validFrenchPhone = /^0[1-9][0-9]{8}$/;
+        if (!validFrenchPhone.test(phoneNumber)) {
+            // Disable the submit button
+            submitButton.disabled = true;
+
+            // Show error message
+            let errorMessage = document.getElementById('phone-error');
+            if (!errorMessage) {
+                errorMessage = document.createElement('div');
+                errorMessage.id = 'phone-error';
+                errorMessage.style.color = 'red';
+                inputElement.parentNode.appendChild(errorMessage);
+            }
+            errorMessage.textContent = "Numéro de téléphone non valide.";
+        } else {
+            // Enable the submit button
+            submitButton.disabled = false;
+
+            // Remove error message if exists
+            const errorMessage = document.getElementById('phone-error');
+            if (errorMessage) {
+                errorMessage.remove();
+            }
+        }
+
+        // Update the input value
         inputElement.value = phoneNumber;
     }
+
+    // Attach the function to the blur event
+    document.getElementById('telephone').addEventListener('blur', formatFrenchPhoneNumber);
 
     function getUrlParameter(name) {
         const url = window.location.href;
@@ -178,8 +215,6 @@
             }
         }
     });
-
-    document.getElementById('telephone').addEventListener('blur', formatFrenchPhoneNumber);
 
     document.addEventListener("DOMContentLoaded", function() {
         const mapping = {
