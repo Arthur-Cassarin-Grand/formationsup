@@ -38,7 +38,7 @@ layout: base.njk
     }
 </style>
 {% if variante.infobar %}
-    <div class="infobar">{{ variante.infobar | safe }}</div>
+    <a href="#form" class="invisible-link" data-tracked="click_infobar"><div class="infobar">{{ variante.infobar | safe }}</div></a>
 {% endif %}
 
 {% include "engine/blocks/nav/nav_1.njk" %}
@@ -49,7 +49,9 @@ layout: base.njk
             <div class="form-title-container">
                 <h1 class="form-title">{{ variante.titre_form | safe }}</h1>
             </div>
+            <a href="#form" class="invisible-link" data-tracked="click_pictos_header">
             {% include "engine/blocks/pictos/pictos_1.njk" %}
+            </a>
             {% include "engine/blocks/puces/puces.njk" %}
             <div class="align-center mozaique-container">
                 <img src="/img/mozaique.png" />
@@ -171,7 +173,9 @@ layout: base.njk
     </div>
     <div>
         <div class="course-branches-list-container">
+
             <div class="course-branches-list">
+                <a href="#form" class="invisible-link" data-tracked="click_courses_branches">
                 <ul>
                     <li><strong>Monde de l'entreprise</strong></li>
                     <li>Commerce international</li>
@@ -190,8 +194,10 @@ layout: base.njk
                     <li>Cybersécurité</li>
                     <li>E-sport</li>
                 </ul>
+                </a>
             </div>
             <div class="course-branches-list">
+                <a href="#form" class="invisible-link" data-tracked="click_courses_branches">
                 <ul>
                     <li><strong>Graphisme et Design</strong></li>
                     <li>Animation - 3D - VFX</li>
@@ -207,8 +213,10 @@ layout: base.njk
                     <li>Banque</li>
                     <li>Gestion de patrimoine</li>
                 </ul>
+                </a>
             </div>
         </div>
+
     </div>
 </section>
 

@@ -108,7 +108,7 @@
         <div class="menu-logo-text">Formation Sup<span class="menu-logo-text-accentuate">★</span></div>
     </div>
     <div class="menu-baseline">
-        {% if variante.baseline %}{{ variante.baseline | safe }}{% else %}{{ default_baseline | safe }}{% endif %}
+        <a href="#form" class="invisible-link" data-tracked="click_baseline">{% if variante.baseline %}{{ variante.baseline | safe }}{% else %}{{ default_baseline | safe }}{% endif %}</a>
     </div>
     <div class="menu-cta">
         <a href="#form" class="menu-cta-button" data-tracked="click_voir_brochure_menu">{{ variante.cta_btn_form_nav }}</a>
