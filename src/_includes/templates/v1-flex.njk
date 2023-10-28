@@ -67,6 +67,64 @@ layout: base.njk
     </div>
 </header>
 
+<style>
+    .partners-certifications {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+    }
+
+    .partners-certifications img {
+        max-width: 100%;
+    }
+
+    .partners-certifications p {
+        font-style: italic;
+        font-size: 1em;
+    }
+
+    /* Tablettes en orientation portrait */
+    @media (min-width: 600px) and (max-width: 899px) and (orientation: portrait) {
+        .partners-certifications {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    /* Tablettes en orientation paysage */
+    @media (min-width: 600px) and (max-width: 899px) and (orientation: landscape) {
+        .partners-certifications {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    /* Desktop et grands écrans */
+    @media (min-width: 900px) {
+        .partners-certifications {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+
+</style>
+<section class="page-container">
+    <a href="#form" class="invisible-link" data-tracked="click_partners_certifications">
+        <!-- <p class="align-center">Tous nos partenaires délivrent des diplômes reconnus par l'État et sont finançables par :</p> -->
+        <div class="partners-certifications">
+            <div>
+                <img src="/img/pole-emploi.png" />
+            </div>
+            <div>
+                <img src="/img/ministere-educ-sup.png" />
+            </div>
+            <div>
+                <img src="/img/cpf.png" />
+            </div>
+            <div>
+                <img src="/img/alternance.png" />
+            </div>
+        </div>
+    </a>
+</section>
+
 <section class="page-container">
     {% include "engine/blocks/logos_scp/logos_scp.njk" %}
 </section>
@@ -270,59 +328,6 @@ layout: base.njk
         </div>
     </section>
 </div>
-
-<style>
-    .partners-certifications {
-        display: grid;
-        grid-template-columns: 1fr;
-        text-align: center;
-        margin-bottom: 4rem;
-    }
-
-    .partners-certifications p {
-        font-style: italic;
-        font-size: 1em;
-    }
-
-    /* Tablettes en orientation portrait */
-    @media (min-width: 600px) and (max-width: 899px) and (orientation: portrait) {
-        .partners-certifications {
-            grid-template-columns: 1fr 1fr;
-        }
-    }
-
-    /* Tablettes en orientation paysage */
-    @media (min-width: 600px) and (max-width: 899px) and (orientation: landscape) {
-        .partners-certifications {
-            grid-template-columns: 1fr 1fr;
-        }
-    }
-
-    /* Desktop et grands écrans */
-    @media (min-width: 900px) {
-        .partners-certifications {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-        }
-    }
-
-</style>
-<a href="#form" class="invisible-link" data-tracked="click_partners_certifications">
-<p class="align-center">Tous nos partenaires délivrent des diplômes reconnus par l'État et finançables par :</p>
-<div class="partners-certifications">
-    <div>
-        <img src="/img/pole-emploi.png" />
-    </div>
-    <div>
-        <img src="/img/ministere-educ-sup.png" />
-    </div>
-    <div>
-        <img src="/img/cpf.png" />
-    </div>
-    <div>
-        <img src="/img/alternance.png" />
-    </div>
-</div>
-</a>
 
 <h2 class="align-center">Quelques parcours de nos étudiants</h2>
 <style>
