@@ -271,6 +271,59 @@ layout: base.njk
     </section>
 </div>
 
+<style>
+    .partners-certifications {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .partners-certifications p {
+        font-style: italic;
+        font-size: 1em;
+    }
+
+    /* Tablettes en orientation portrait */
+    @media (min-width: 600px) and (max-width: 899px) and (orientation: portrait) {
+        .partners-certifications {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Tablettes en orientation paysage */
+    @media (min-width: 600px) and (max-width: 899px) and (orientation: landscape) {
+        .partners-certifications {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Desktop et grands écrans */
+    @media (min-width: 900px) {
+        .partners-certifications {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+</style>
+<a href="#form" class="invisible-link" data-tracked="click_partners_certifications">
+<div class="partners-certifications">
+    <div>
+        <img src="/img/pole-emploi.png" />
+        <p>Formations finançables via Pôle Emploi</p>
+    </div>
+    <div>
+        <img src="/img/ministere-educ-sup.png" />
+        <p>Diplômes reconnus par l'État (du CAP au BAC+5)</p>
+    </div>
+    <div>
+        <img src="/img/cpf.png" />
+        <p>Formations finançables via le CPF</p>
+    </div>
+</div>
+</a>
+
 <h2 class="align-center">Quelques parcours de nos étudiants</h2>
 <style>
     .block-course-reviews {
