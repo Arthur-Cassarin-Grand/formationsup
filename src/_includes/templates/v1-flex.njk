@@ -288,38 +288,39 @@ layout: base.njk
     /* Tablettes en orientation portrait */
     @media (min-width: 600px) and (max-width: 899px) and (orientation: portrait) {
         .partners-certifications {
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr 1fr;
         }
     }
 
     /* Tablettes en orientation paysage */
     @media (min-width: 600px) and (max-width: 899px) and (orientation: landscape) {
         .partners-certifications {
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr 1fr;
         }
     }
 
     /* Desktop et grands écrans */
     @media (min-width: 900px) {
         .partners-certifications {
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
         }
     }
 
 </style>
 <a href="#form" class="invisible-link" data-tracked="click_partners_certifications">
+<p class="align-center">Tous nos partenaires délivrent des diplômes reconnus par l'État et finançables par :</p>
 <div class="partners-certifications">
     <div>
-        <img src="/img/pole-emploi.png" />
-        <p>Formations finançables via Pôle Emploi</p>
+        <img src="/img/pole-emploi.png" style="width: 90%" />
     </div>
     <div>
-        <img src="/img/ministere-educ-sup.png" />
-        <p>Diplômes reconnus par l'État (du CAP au BAC+5)</p>
+        <img src="/img/ministere-educ-sup.png" style="width: 90%" />
     </div>
     <div>
-        <img src="/img/cpf.png" />
-        <p>Formations finançables via le CPF</p>
+        <img src="/img/cpf.png" style="width: 90%" />
+    </div>
+    <div>
+        <img src="/img/alternance.png" style="width: 90%" />
     </div>
 </div>
 </a>
