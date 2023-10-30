@@ -32,7 +32,7 @@
           "picto_text":"<strong>Passez vos examens en ligne</strong>, à votre rythme"
         }
       ],
-      "pictos_color": "#EF9B11",
+      "pictos_color": "var(--primary-color)",
       "picto_font_size": "4em",
       "pictos_number": "4",
       "logos_scp_list": [
@@ -75,7 +75,7 @@
           "picto_text":"<strong>Passez vos examens en ligne</strong>, à votre rythme"
         }
       ],
-      "pictos_color": "#EF9B11",
+      "pictos_color": "var(--primary-color)",
       "picto_font_size": "4em",
       "pictos_number": "4",
       "logos_scp_list": [
@@ -118,7 +118,7 @@
           "picto_text":"<strong>Passez vos examens en ligne</strong>, à votre rythme"
         }
       ],
-      "pictos_color": "#EF9B11",
+      "pictos_color": "var(--primary-color)",
       "picto_font_size": "4em",
       "pictos_number": "4",
       "logos_scp_list": [
